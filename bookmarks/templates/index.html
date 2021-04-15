@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
-
 {% block body %}
 <div class="alert alert-info" role="alert">
-    <h1>Bookmarks</h1>
-    <p>Check all <a href="#">Bookmarks here</a>.</p>
-    <p>Create new bookmark, <a href="#">click here</a>.</p>
+    <marquee><h1>Bookmarks</h1></marquee>
+    <p>Check all <a href="{% url 'bookmarks' %}">Bookmarks here</a>.</p>
+    <p>Create new bookmark, <a href="{% url 'bookmarks-create' %}">click here</a>.</p>
 </div>
 {% endblock %}
