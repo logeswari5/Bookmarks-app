@@ -7,6 +7,7 @@ from .models import bookmarks
 
 def index(request):
     return render(request, 'index.html')
+
 class BookmarkDetailView(generic.DetailView):
     model = bookmarks
     paginate_by = 2
