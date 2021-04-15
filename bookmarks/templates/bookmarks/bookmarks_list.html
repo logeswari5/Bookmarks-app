@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% extends "base.html" %}
+
+{% block body %}
+  <div class="alert alert-info" role="alert">
+  <h1>Bookmarks List</h1>
+  </div>
+  {% if bookmarks_list %}
+  <ul>
+    {% for bookmarks in bookmarks_list %}
+      <li>
+        <div class="alert alert-dark" role="alert">
+        <a href="{{ bookmarks.get_absolute_url }}">{{ bookmarks.name }}</a>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <div class="alert alert-danger" role="alert">
+  There is no bookmark created.
+  </div>
+  {% endif %}
+{% endblock %}
+</head>
+</html>
