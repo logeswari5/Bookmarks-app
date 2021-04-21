@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+
 {% extends "base.html" %}
 
 {% block body %}
@@ -11,11 +6,10 @@
   <h1>Bookmarks</h1>
 </div>
 <div class="alert alert-success" role="alert">
-  <p><strong>URL:</strong> {{ bookmarks.url }}</p>
   <p><strong>Name:</strong> {{ bookmarks.name }}</p>
+    <p><strong>URL:</strong> {{ bookmarks.url }}</p>
   <p><strong>Description:</strong> {{ bookmarks.description }}</p>
   <p><strong>Tags:</strong> {{ bookmarks.tag }}</p>
 </div>
 {% endblock %}
 
-</html>
