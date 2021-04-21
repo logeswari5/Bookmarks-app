@@ -24,5 +24,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('bookmarks/', include('bookmarks.urls')),
     path('', RedirectView.as_view(url='bookmarks/')),
+    path('accounts/', include('django.contrib.auth.urls')),
     path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

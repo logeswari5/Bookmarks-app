@@ -9,16 +9,14 @@
 <h1>Delete this Bookmark</h1>
 
 <div class="alert alert-danger" role="alert">
-  Are you sure you want to delete this bookmark: {{ bookmark }}?
+  Are you sure you want to delete⚠ : {{ bookmarks }}?
 </div>
 
 <form action="" method="POST">
   {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Yes, delete.</button>
+    <button type="submit" class="btn btn-danger">Yes</button>
 </form>
 
 {% endblock %}
-
-
 </head>
 </html>

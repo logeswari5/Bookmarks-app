@@ -39,9 +39,9 @@ body {
 
                     {% if user.is_authenticated %}
                         <li>User: {{ user.get_username }}</li>
-                <li><a class="dropdown-item" href="{% url 'logout' %}?next={{request.path}}">LOGOUT</a></li>
+                <li><a class="dropdown-item" href="#">LOGOUT</a></li>
                 {% else %}
-                <li><a class="dropdown-item" href="{% url 'login' %}?next={{request.path}}">LOGIN</a></li>
+                <li><a class="dropdown-item" href="#">LOGIN</a></li>
                 {% endif %}
 
                     </ul>
@@ -69,6 +69,7 @@ body {
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 
 </html>
+
 
 
 
