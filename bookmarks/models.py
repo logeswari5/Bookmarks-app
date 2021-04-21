@@ -5,8 +5,8 @@ from taggit.managers import TaggableManager
 
 
 class bookmarks(models.Model):
-    url = models.URLField(max_length=200)
     name = models.CharField(max_length=200)
+    url = models.URLField(max_length=200)
     description = models.TextField(max_length=1000, help_text='Add description of bookmark')
     tag = TaggableManager()
 
@@ -15,3 +15,6 @@ class bookmarks(models.Model):
 
     def __str__(self):
         return self.name
+
+
+
